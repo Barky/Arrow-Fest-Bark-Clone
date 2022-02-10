@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Arrow
+  - PlusGate
+  - CloneArrow
+  - MinusGate
+  - DivideGate
+  - MultiplyGate
+  - Enemy
   layers:
   - Default
   - TransparentFX
