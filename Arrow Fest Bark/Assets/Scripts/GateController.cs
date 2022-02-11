@@ -16,12 +16,18 @@ public class GateController : MonoBehaviour
     private void Awake()
     {
         arrow_multiplier = GameObject.Find("ArrowController").GetComponent<ArrowMultiplier>();
-        _text = GameObject.Find(gameObject.name+ "/Canvas/No").GetComponent<TextMeshProUGUI>();
+        
+        
 
     }
-
+    
     private void Start()
     {
+        string text_dir = gameObject.transform.parent
+            ? gameObject.transform.parent.name + "/" + gameObject.name + "/Canvas/No"
+            : gameObject.name + "/Canvas/No";
+        _text = GameObject.Find(text_dir).GetComponent<TextMeshProUGUI>();
+        
         switch (transform.tag)
         {
             case "PlusGate":
@@ -37,7 +43,7 @@ public class GateController : MonoBehaviour
             case "MultiplyGate":
                 rand_ = Random.Range(1, 6);
                 Debug.LogError(rand_);
-                _text.text = "X" + rand_.ToString();
+                _text.text = "" + rand_.ToString();
                 break;
             case "DivideGate":
                 rand_ = Random.Range(1, 5);

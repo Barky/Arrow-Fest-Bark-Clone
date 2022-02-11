@@ -6,7 +6,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public GameObject arrowparent;
-    private Vector3 offset = new Vector3(1.21f, 3.06f, -10.74f), arrowtransform;
+    private Vector3 offset = new Vector3(1.21f, 9.68f, -11.5f), arrowtransform;
     public float smoothness;
 
     private void Start()
